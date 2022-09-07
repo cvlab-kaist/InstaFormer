@@ -1,2 +1,2 @@
 # InstaFormer
-##  [[Project Page](https://KU-CVLAB.github.io/LANIT/)]
+##  [[Project Page](https://KU-CVLAB.github.io/InstaFormer/)]
