@@ -128,7 +128,7 @@
 	<center>
 		<span style="font-size:36px">InstaFormer: Instance-aware Image-to-Image Translation with Transformer</span>
 		<table align=center width=1100px>
-			<table align=center width=1500px>
+			<table align=center width=1100px>
 				<tr>
 					<td align=center width=150px>
 						<center>
@@ -137,7 +137,7 @@
 					</td>
 					<td align=center width=150px>
 						<center>
-							<span style="font-size:24px"><a href="https://scholar.google.co.kr/citations?user=oDplwx8AAAAJ&hl=ko&oi=sra">Jongbeom Baek<sup>1</sup></a></span>
+							<span style="font-size:24px"><a href="https://github.com/jongbeombaek">Jongbeom Baek<sup>1</sup></a></span>
 						</center>
 					</td>
 					<td align=center width=150px>
@@ -213,15 +213,13 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				Existing techniques for image-to-image translation commonly have suffered from two critical problems: heavy reliance on per-sample domain annotation and/or inability of handling multiple attributes per image. Recent methods adopt clustering approaches to easily provide per-sample annotations in an unsupervised manner.
-				However, they cannot account for the real-world setting; one sample may have multiple attributes.
-				In addition, the semantics of the clusters are not easily coupled to human understanding.
-				To overcome these, we present a LANguage-driven Image-to-image Translation model, dubbed LANIT.
-				We leverage easy-to-obtain candidate domain annotations given in texts for a dataset and jointly optimize them during training.
-				The target style is specified by aggregating multi-domain style vectors according to the multi-hot domain assignments.
-				As the initial candidate domain texts might be inaccurate, we set the candidate domain texts to be learnable and jointly fine-tune them during training.
-				Furthermore, we introduce a slack domain to cover samples that are not covered by the candidate domains.
-				Experiments on several standard benchmarks demonstrate that LANIT achieves comparable or superior performance to existing models
+				We present a novel Transformer-based network architecture for instance-aware image-to-image translation, dubbed InstaFormer, to effectively integrate global- and instance-level information. 
+				By considering extracted content features from an image as tokens, our networks discover global consensus of content features by considering context information through a self-attention module in Transformers. 
+				By augmenting such tokens with an instance-level feature extracted from the content feature with respect to bounding box information, 
+				our framework is capable of learning an interaction between object instances and the global image, thus boosting the instance-awareness. 
+				We replace layer normalization (LayerNorm) in standard Transformers with adaptive instance normalization (AdaIN) to enable a multi-modal translation with style codes. 
+				In addition, to improve the instance-awareness and translation quality at object regions, we present an instance-level content contrastive loss defined between input and translated image. 
+				We conduct experiments to demonstrate the effectiveness of our InstaFormer over the latest methods and provide extensive ablation studies.
 			</td>
 		</tr>
 	</table>
