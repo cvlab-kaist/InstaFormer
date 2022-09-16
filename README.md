@@ -1,6 +1,6 @@
 # InstaFormer: Instance-aware Image-to-Image Translation with Transformer (CVPR 2022)
 
-Check out project [[Project Page](https://KU-CVLAB.github.io/InstaFormer/)] and the paper on [[arXiv](https://arxiv.org/abs/2203.16248)].
+Check out project at [[Project Page](https://KU-CVLAB.github.io/InstaFormer/)] and the paper on [[arXiv](https://arxiv.org/abs/2203.16248)].
 
 ### BibTeX
 If you find this research useful, please consider citing:
