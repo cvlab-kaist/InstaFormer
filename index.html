@@ -119,8 +119,8 @@
 <html>
 <head>
 	<title>InstaFormer</title>
-	<meta property="og:image" content="https://KU-CVLAB.github.io/LANIT/resources/teaser_lanit.png"/>
-	<meta property="og:title" content="LANIT: Language-Driven Image-to-Image Translation for Unlabeled Data" />
+	<meta property="og:image" content="https://KU-CVLAB.github.io/InstaFormer/resources/instaformer_arch_a.png"/>
+	<meta property="og:title" content="InstaFormer: Instance-aware Image-to-Image Translation with Transformer" />
 </head>
 
 <body>
@@ -193,7 +193,7 @@
 			<tr>
 				<td width=420px>
 					<center>
-						<img class="round" style="width:800px" src="./resources/teaser_lanit.png"/>
+						<img class="round" style="width:800px" src="./resources/instaformer_arch_a.png"/>
 					</center>
 				</td>
 			</tr>
@@ -201,7 +201,7 @@
 		<table align=center width=850px>
 			<tr>
 				<td>
-					LANIT firstly highlights to address multiple attributes in one sample for Image-to-Image translation tasks.
+					Overall Architecture for InstaFormer: The gray background represents the test phase, where we have no access on object instance bounding box
 				</td>
 			</tr>
 		</table>
@@ -226,7 +226,7 @@
 	<br>
 	<hr>
 
-	<center><h1> Levels of Supervision </h1></center>
+	<center><h1> ViT Encoder Block </h1></center>
 	
 	<table align=center width=500px>
 		<tr>
@@ -241,9 +241,7 @@
 		<center>
 			<tr>
 				<td>
-					For unpaired image-to-image translation, (a) conventional methods (CycleGAN, MUNIT, FUNIT, StarGAN, SEMIT) require at least per-sample-level domain supervision, which is often hard to collect.
-					To overcome this, (b) unsupervised learning methods (TUNIT, Style aware discriminator) learn image translation model using a dataset itself without any supervision, but it shows limited performance and lacks the semantic understanding of each cluster, limiting its applicability.
-					Unlike them, (c) we present a novel framework for image translation that requires a dataset with possible textual domain descriptions (i.e., dataset-level annotation), which achieves comparable or even better performance than previous methods.
+					-
 				</td>
 			</tr>
 		</center>
@@ -251,28 +249,6 @@
 	<br>
 	<hr>
 
-	<center><h1> Network Configuration </h1></center>
-	
-	<table align=center width=600px>
-		<tr>
-			<td align=center width=600px>
-				<center>
-					<td><img class="round" style="width:800px" src="./resources/network_config_lanit.png"/></td>
-				</center>
-			</td>
-		</tr>
-	</table>
-	<table align=center width=850px>
-		<center>
-			<tr>
-				<td>
-					We propose a language-driven Image-to-Image translation framework with candidate "dataset-level" domain annotations, which is more practical than fully-unsupervised methods in the real-world.
-				</td>
-			</tr>
-		</center>
-	</table>
-	<br>
-	<hr>
 	
 	<center><h1> Qualitative Results </h1></center>
 	
@@ -360,11 +336,11 @@
 	<table align=center width=450px>
 		<center><h1>Paper and Supplementary Material</h1></center>
 		<tr>
-			<td><a href="https://arxiv.org/abs/2208.14889"><img class="layered-paper-big" style="height:175px" src="./resources/paper_lanit.png"/></a></td>
-			<td><span style="font-size:14pt">J. Park, S. Kim, S. Kim, J. Yoo, Y. Uh, S. Kim<br>
-				<b>LANIT: Language-Driven Image-to-Image Translation for Unlabeled Data.</b><br>
-				(hosted on <a href="https://arxiv.org/abs/2208.14889">ArXiv</a>)<br>
-				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+			<td><a href="https://openaccess.thecvf.com/content/CVPR2022/html/Kim_InstaFormer_Instance-Aware_Image-to-Image_Translation_With_Transformer_CVPR_2022_paper.html"><img class="layered-paper-big" style="height:175px" src="./resources/paper_instaformer.png"/></a></td>
+			<td><span style="font-size:14pt">S. Kim, J. Baek, J. Park, G. Kim, S. Kim<br>
+				<b>InstaFormer: Instance-aware Image-to-Image Translation with Transformer.</b><br>
+				(hosted on <a href="https://arxiv.org/abs/2203.16248">ArXiv</a>)<br>
+				<!-- (<a href="./resources/Kim_InstaFormer_Instance-Aware_Image-to-Image_Translation_With_Transformer_CVPR_2022_paper.pdf">camera ready</a>)<br> -->
 				<span style="font-size:4pt"><a href=""><br></a>
 				</span>
 			</td>
