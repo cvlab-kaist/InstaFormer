@@ -1,0 +1,51 @@
+Train: 
+  model_name: 'Instaformer_init' # name of the experiment. It decides where to store samples and models
+  log_path: './weights' # path of weights
+  use_cuda: True
+  seed: 42
+  start_epoch: 0 # if resume, set this as a number
+  end_epoch: 200
+  batch_size: 5
+  num_workers: 5 # # threads for loading data
+  lr: 2e-4 # initial learning rate for adam
+  beta1: 0.5 # momentum term of adam
+  beta2: 0.999 # momentum term of adam
+  lr_scheduler: True
+  step_size: 150
+  w_GAN: 1.0 # weight for GAN loss
+  w_Recon: 10.0 # weight for recon loss
+  w_Style: 10.0 # weight for style loss
+  w_NCE: 2.0 # weight for NCE loss
+  w_Instance_NCE: 2.0 # weight for instance NCE loss
+  display_iter: 1000 # frequency of saving the latest results
+  display_epoch: 1 # frequency of saving checkpoints at the end of epochs
+  save_img_iter: 150 # frequency of saving the latest trainng images
+
+  model:
+    load_weight : True # if training from scratch, set this as False
+    load_optim : True # if training from scratch, set this as False
+    weight_path : './weights/Instaformer_init/weights_0' # if training from scratch, set this as None
+    load_weight_path: weights/Instaformer_init/weights_0' # if training from scratch, set this as None
+    feat_layers: [0,4,8] # compute NCE loss on which layers
+    num_patches: 256 # number of patches per layer
+
+  data:
+    dataset: 'init'
+    dir_A: # path of dataset_A
+    dir_B: # path of dataset_B
+    height: 352 # scale images to this size
+    width: 352 # scale images to this size
+    num_box: 20 # # box
+    max_dataset_size: 20000 # Maximum number of samples allowed per dataset. If the dataset directory contains more than max_dataset_size, only a subset is loaded.
+
+  visualize:
+    display_winsize: 256 # visdom display size
+    display_freq: 400 # frequency of showing training results on screen
+    display_ncols:  4 # if positive, display all images in a single visdom web panel with certain number of images per row.
+    display_id: -1 # window id of the web display.
+    display_server: "http://localhost" # visdom server of the web display
+    display_env:  'main' # visdom display environment name (default is "main")
+    display_port: 8098 # visdom port of the web display
+    update_html_freq: 1000 # frequency of saving training results to html
+    print_freq: 100 # frequency of showing training results on console
+    no_html: False # do not save intermediate training results to [opt.checkpoints_dir]/[opt.name]/web/

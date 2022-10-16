@@ -1,0 +1,13 @@
+Test: 
+    use_cuda: True  
+    model:
+      load_weight : True # loading weight
+      feat_layers: []
+      num_patches: 256
+
+    data:
+      dataset: 'init'
+      height: 352 # scale images to this size
+      width: 352 # scale images to this size
+      num_box: -1 # not loading gt box
+      max_dataset_size: -1
