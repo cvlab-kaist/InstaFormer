@@ -3,7 +3,7 @@ This is the implementation of the paper <a href="https://arxiv.org/abs/2203.1624
 
 You can check out project at [[Project Page](https://KU-CVLAB.github.io/InstaFormer/)] and the paper on [[arXiv](https://arxiv.org/abs/2203.16248)].
 
-## Environment
+### Environment
 * Python 3.8, PyTorch 1.11.0
 
 ### Training & Test Script
