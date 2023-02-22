@@ -6,6 +6,10 @@ You can check out project at [[Project Page](https://KU-CVLAB.github.io/InstaFor
 ### Environment
 * Python 3.8, PyTorch 1.11.0
 
+
+### Datasets
+* INIT [[dataset]](https://zhiqiangshen.com/projects/INIT/index.html)
+
 ### Training & Test Script
 
 - train
